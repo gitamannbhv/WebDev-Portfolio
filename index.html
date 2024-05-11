@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website - Anubhav</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="header">
+        <div class="container">
+            <nav>
+                <img src="image\IMG_1764.PNG" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>UI/UX Designer</p>
+                <h1>Hi, I'm <span>Aman Anubhav</span><br>from India</h1>
+            </div>
+        </div>
+    </section>
+    
+<!--------------------ABOUT-------------------->
+
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="aboutcol1">
+                    <img id="about-face-img" src="image/IMG_E1725.JPG">
+                </div>
+                <div class="aboutcol2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium similique dolores sit vitae in sint quam rem voluptates assumenda facere nulla, vel alias nobis? Laborum esse facere hic voluptatibus tempore!</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skiils')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Web/App Iternfaces</li>
+                            <li><span>Web Development</span><br>Web app Development</li>
+                            <li><span>App Development</span><br>Building Andriod/IOS apps</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2020 - Present</span><br>CEO & Founder of Deuxstem</li>
+                            <li><span>2022 - 2023</span><br>Internship at Save SOlution Pvt. Ltd.</li>
+                            <li><span>2023 - Present</span><br>AI/ML Technical Support at E-Labs KIIT</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2023</span><br>High School Graduated from DPS, Gaya</li>
+                            <li><span>2023</span><br>Entreprenuership Certification form LaunchX, MIT, Cambridge Boston </li>
+                            <li><span>2027</span><br>CSE from KIIT University</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!--------------------Services----------------->
+
+<section id="services">
+    <div class="container">
+        <h1 class="subtitle">Services</h1>
+        <div class="services-list">
+            <div>
+                <h2>Web Design</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus veniam debitis illum mollitia odit repellendus consequatur, eligendi necessitatibus atque fugit. Soluta ut, possimus autem deleniti facere voluptate et officia repellendus.</p>
+                <a href="#">learn more</a>
+            </div>
+            <div>
+                <h2>AI/ML Development</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus veniam debitis illum mollitia odit repellendus consequatur, eligendi necessitatibus atque fugit. Soluta ut, possimus autem deleniti facere voluptate et officia repellendus.</p>
+                <a href="#">learn more</a>
+            </div>
+            <div>
+                <h2>Cybe Security</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus veniam debitis illum mollitia odit repellendus consequatur, eligendi necessitatibus atque fugit. Soluta ut, possimus autem deleniti facere voluptate et officia repellendus.</p>
+                <a href="#">learn more</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
